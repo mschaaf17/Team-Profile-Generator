@@ -56,6 +56,10 @@ return inquirer.prompt([
 ])
 }
 
+//choice intern then run a list of intern questions 
+//choice engineer run a list of engineer questions
+//then repeat build team questions
+
 promptUser()
 .then (EmployeeData => {
 fs.writeFile('./index.html', JSON.stringify(EmployeeData, null, '\t'), err => {

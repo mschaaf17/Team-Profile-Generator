@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647813588491" clover="3.2.0">
-  <project timestamp="1647813588492" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="9" coveredelements="9" complexity="0" loc="6" ncloc="6" packages="1" files="3" classes="3"/>
+<coverage generated="1648079919135" clover="3.2.0">
+  <project timestamp="1648079919136" name="All files">
+    <metrics statements="17" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="3" elements="27" coveredelements="11" complexity="0" loc="17" ncloc="17" packages="1" files="3" classes="3"/>
     <file name="Employee.js" path="C:\Users\madis\Desktop\challenge1\oop-team-profile-gen\lib\Employee.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
@@ -13,9 +13,20 @@
       <line num="5" count="1" type="stmt"/>
     </file>
     <file name="Intern.js" path="C:\Users\madis\Desktop\challenge1\oop-team-profile-gen\lib\Intern.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <line num="2" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="28" count="0" type="stmt"/>
+      <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>

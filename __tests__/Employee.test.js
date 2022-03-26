@@ -1,6 +1,5 @@
 const Employee = require('../lib/Employee')
 
-test('adds two numbers', () => {
-expect(Employee(1, 2)).toBe(3)
+test('should be a string displaying employees name', () => {
+expect(Employee()).toEqual(expect.stringContaining(employeeData.name.toString()))
 })
-

@@ -1,13 +1,10 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
-const createPage = require('../lib/pageTemplate')
-//const teamPage = require('../lib/fileWritePage');
-const Employee = require('./Employee')
-
-
-const Manager = require('./Manager')
-const Intern = require('./Intern')
-const Engineer = require('./Engineer')
+const createPage = require('./src/pageTemplate')
+const Employee = require('./lib/Employee')
+const Manager = require('./lib/Manager')
+const Intern = require('./lib/Intern')
+const Engineer = require('./lib/Engineer')
 
 
 //can this let be apart of employees class? so i can use it to extend to other employees?
@@ -53,7 +50,7 @@ const promptUser = EmployeeData => {
             name: 'role',
             message: "What the employee's role?(Required)",
             choices: ['Manager', 'Intern', 'Engineer']
-            //based of this answer certain questions need to be prompted 
+        
         }
         
     ])
@@ -97,7 +94,7 @@ const managerQuestions = (EmployeeData) => {
             return promptUser()
         } else {
             generateTemplate() 
-           // return EmployeeData
+           
         }
         
     })
@@ -106,7 +103,7 @@ const managerQuestions = (EmployeeData) => {
 //writing the information into the html page
         function generateTemplate() {
         const myTeamPage = createPage(employees)
-        fs.writeFile('./generatedPage.html', myTeamPage, err => {
+        fs.writeFile('./dist/generatedPage.html', myTeamPage, err => {
             if (err) throw new Error(err);
             console.log('html created')
         })
@@ -128,14 +125,12 @@ const internQuestions = (EmployeeData) => {
             default: false
         }
     ]).then(internData => {
-        //create new class-- manager.js make a new manager and then push the manager 
         const intern = new Intern(EmployeeData.name, EmployeeData.id, EmployeeData.email, EmployeeData.role, internData.school)
         employees.push(intern);
          if (internData.confirmBuildTeam) {
              return promptUser()
          } else {
             generateTemplate() 
-           // return EmployeeData
          }
     }) 
    
@@ -171,7 +166,6 @@ const internQuestions = (EmployeeData) => {
              return promptUser()
          } else {
             generateTemplate() 
-           // return EmployeeData
          }
     }) 
    
